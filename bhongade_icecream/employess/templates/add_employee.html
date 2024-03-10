@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Employee</title>
+</head>
+<body>
+
+    <h1>Add Employee Information</h1>
+    <a href="employee_manage">BACK</a>
+    <a href="home">HOME</a><br>
+
+    {{result}} <br>
+    <form action="/save/" method='post'>
+        {% csrf_token %}   
+            <br><br>
+            Employee Id = <input type="text" name="id" value="{{employee.id}}">  <br><br>
+            Employee First Name = <input type="text" name="first_name" value="{{employee.first_name}}"> <br><br>
+            Employee Last Name = <input type="text" name="last_name" value="{{employee.last_name}}"> <br><br>
+            Employee Age = <input type="text" name="age" value="{{employee.age}}"> <br><br>
+            Employee Email = <input type="text" name="email" value="{{employee.email}}"> <br><br>
+            Employee Mobile No = <input type="text" name="mobile_No" value="{{employee.mobile_no}}"> <br><br>
+            Employee Address = <input type="text" name="address" value="{{employee.address}}"> <br><br>
+            Employee Total = <input type="text" name="total" value="{{employee.total}}"> <br><br>
+            Employee Paid = <input type="text" name="paid" value="{{employee.paid}}"> <br><br>
+            Employee Balance = <input type="text" name="balance" value="{{employee.balance}}"> <br><br>
+            <input type="submit" name="save", value="save">
+
+
+    </form>
+    
+</body>
+</html>

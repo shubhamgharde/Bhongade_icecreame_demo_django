@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <script src="js/flag.js"></script>  
+    <title>Exercise</title>
+    <style>
+        h1{color:blue;}
+    </style>
+</head>
+<body>
+
+    <h1>Sign Up Form</h1>
+    <form action="" method="post">
+        {% csrf_token %}
+
+        <input type="text" id="username" placeholder="username" name="username" required><br>
+        <input type="text" id="First Name" placeholder="Enter first Name" name="first_name" ><br>
+        <input type="text" id="Last Name" placeholder="Enter Last Name" name="last_name"  required><br>
+        <input type="Email" id="Email" placeholder="Enter Email" name="email" required><br>
+        <input type="text" id="mob" name="mob" placeholder="Mobile Number" required><br>
+        <input type="password" id="password1" name="password1" placeholder="Enter password" ><br>
+        <!-- <input type="checkbox" onclick="show()">Show Password<br> -->
+        <input type="password" id="password2" name="password2" placeholder="Confirm password" required>
+
+        <!-- <input type="checkbox" onclick="view()">Show Password<br>   -->
+
+
+        <!-- <input type="checkbox" onclick="show()">Show Password -->
+        <br>
+        <!-- Date Of Birth:<input type="date" placeholder="Date Of Birth" required><br> -->
+
+    
+    <input type="submit" onclick="alert('confirm');" placeholder="submit"><br><br>
+
+    <a href="{% url 'login' %}" >I have already account</a>
+    </form>
+
+</body>
+</html>
+
+    
+    <script>
+    function show() 
+    {
+        var a = document.getElementById("password");
+        if (a.type == "password")
+        {
+        a.type = "text";
+        } 
+        else 
+        {
+        a.type = "password";
+        }
+    }
+    function view() 
+    {
+        var a = document.getElementById("psw");
+        if (a.type == "password")
+        {
+        a.type = "text";
+        } 
+        else 
+        {
+        a.type = "password";
+        }
+    }
+    </script>
+</body>
+</html>
+
+
+    

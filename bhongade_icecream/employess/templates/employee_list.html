@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee List</title>
+</head>
+<body>
+    <h1>Employee List</h1>
+    <a href="employee_manage">BACK</a>
+    <a href="home">HOME</a> <br><br><br>
+
+
+    <table border="1">
+        <thead>
+            <th><a href="">EMPLOYEE ID</a></th>
+            <th><a href="">EMPLOYEE FIRST NAME</a></th>
+            <th><a href="">EMPLOYEE LAST NAME</a></th>
+            <th><a href="">EMPLOYEE AGE</a></th>
+            <th><a href="">EMPLOYEE EMAIL</a></th>
+            <th><a href="">EMPLOYEE MOBILE NO</a></th>
+            <th><a href="">EMPLOYEE ADDRESS</a></th>
+            <th><a href="">EMPLOYEE TOTAL</a></th>
+            <th><a href="">EMPLOYEE PAID</a></th>
+            <th><a href="">EMPLOYEE BALANCE</a></th>
+        </thead>
+        <tbody>
+            {% for employee in employee_list %}
+        <tr>
+            <td>{{employee.id}}</td>
+            <td>{{employee.first_name}}</td>
+            <td>{{employee.last_name}}</td>
+            <td>{{employee.age}}</td>
+            <td>{{employee.email}}</td>
+            <td>{{employee.mobile_no}}</td>
+            <td>{{employee.address}}</td>
+            <td>{{employee.total}}</td>
+            <td>{{employee.paid}}</td>
+            <td>{{employee.balance}}</td>
+            <td><a href="/edit/{{employee.id}}">EDIT</a>
+                <a href="/delete/{{employee.id}}">DELETE</a> </td>
+        </tr>
+        {% endfor %}
+
+        </tbody>
+
+    </table>
+
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    </style>
+</head>
+<body>
+    <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+
+    <form method="post">
+        <h3>Login Here</h3>
+        {% if error %}
+        <h4>{{error}}</h4>
+        {% endif %}
+        <form action="" method="post">
+        {% csrf_token %}
+        <label for="username">Username</label>
+        <input type="text" placeholder="Enter Username" id="username" name="username"><br><br>
+
+        <label for="password">Password</label>
+        <input type="password" placeholder="Password" id="password" name="password"><br><br>
+        
+        <a href="{% url 'employee_manage' %}" onclick="action()">Log In</a>
+
+        
+        <!-- <input type="button" value=""> -->
+        <!-- <div class="social">
+          <div class="go"><i class="fab fa-google"></i>  Google</div>
+          <div class="fb"><i class="fab fa-facebook"></i>  Facebook</div>
+        </div> -->
+        <a href="{% url 'signup' %}" >Create a account</a>
+    </form>
+
+</body>
+</html>
+
